@@ -12,3 +12,5 @@ Repositório de estudo sobre Spring Boot e JPA
 - **Service** seria outro Desing Pattern onde há somente a regra de negócio e não tem acesso direto ao banco de dados.
 
 - **Controller** Ele é utilizado para lidar com a ligação da View com as outras partes do sistema que são a regra de negócio e banco de dados.
+
+![image](https://user-images.githubusercontent.com/78964459/184904830-2831f962-b463-4161-8704-bf8e018584f6.png)
