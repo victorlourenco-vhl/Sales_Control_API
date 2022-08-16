@@ -14,3 +14,9 @@ Repositório de estudo sobre Spring Boot e JPA
 - **Controller** Ele é utilizado para lidar com a ligação da View com as outras partes do sistema que são a regra de negócio e banco de dados.
 
 ![image](https://user-images.githubusercontent.com/78964459/184904830-2831f962-b463-4161-8704-bf8e018584f6.png)
+
+## Aplicação Web vs API RestFul
+- a diferença fundamental entre um aplicativo web e uma API REST é que a resposta de um aplicativo da web é uma visualização geral de HTML + CSS + JavaScript enquanto a API REST apenas retorna dados em forma de JSON ou XML. 
+
+## @Controller vs @RestController
+- O trabalho do **@Controller** é criar um Map do model object e encontrar uma view, mas o **@RestController** simplesmente retorna o objeto e os dados do objeto são gravados diretamente na resposta HTTP como JSON ou XML.
