@@ -13,6 +13,7 @@ import com.tgid.spring.domain.Cidade;
 import com.tgid.spring.domain.Cliente;
 import com.tgid.spring.domain.Endereco;
 import com.tgid.spring.domain.Estado;
+import com.tgid.spring.domain.ItemPedido;
 import com.tgid.spring.domain.Pagamento;
 import com.tgid.spring.domain.PagamentoComBoleto;
 import com.tgid.spring.domain.PagamentoComCartao;
@@ -25,6 +26,7 @@ import com.tgid.spring.repositories.CidadeRepository;
 import com.tgid.spring.repositories.ClienteRepository;
 import com.tgid.spring.repositories.EnderecoRepository;
 import com.tgid.spring.repositories.EstadoRepository;
+import com.tgid.spring.repositories.ItemPedidoRepository;
 import com.tgid.spring.repositories.PagamentoRepository;
 import com.tgid.spring.repositories.PedidoRepository;
 import com.tgid.spring.repositories.ProdutoRepository;
@@ -48,6 +50,9 @@ public class Application implements CommandLineRunner{
 	private PedidoRepository pedidoRepository;
 	@Autowired
 	private PagamentoRepository pagamentoRepository;
+	@Autowired
+	private ItemPedidoRepository itemPedidoRepository;
+	
 	
 	
 	
@@ -113,6 +118,19 @@ public class Application implements CommandLineRunner{
 		
 		pedidoRepository.saveAll(Arrays.asList(ped1, ped2));
 		pagamentoRepository.saveAll(Arrays.asList(pagto1, pagto2));
+		
+		ItemPedido ip1 = new ItemPedido(ped1, p1, 0.0, 1, 2000.0);
+		ItemPedido ip2 = new ItemPedido(ped1, p3, 0.0, 2, 80.0);
+		ItemPedido ip3 = new ItemPedido(ped2, p2, 100.0, 1, 800.0);
+		
+		ped1.getItens().addAll(Arrays.asList(ip1, ip2));	
+		ped2.getItens().addAll(Arrays.asList(ip3));	
+		
+		p1.getItens().addAll(Arrays.asList(ip1));
+		p2.getItens().addAll(Arrays.asList(ip3));
+		p3.getItens().addAll(Arrays.asList(ip2));
+		
+		itemPedidoRepository.saveAll(Arrays.asList(ip1, ip2, ip3));
 		
 	}
 
