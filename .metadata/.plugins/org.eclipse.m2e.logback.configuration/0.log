@@ -3265,3 +3265,18 @@ org.eclipse.core.runtime.CoreException: Launch configuration Programa (2) refere
 2022-08-17 17:56:33,478 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-08-17 17:56:33,478 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-08-17 17:56:33,478 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\github\back-end\Spring Boot\Spring_Boot\02_projeto_spring\src\test\resources
+2022-08-18 07:50:17,409 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-08-18 08:41:25,416 [Worker-14: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-18 08:41:25,437 [Worker-14: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-08-18 08:41:25,441 [Worker-14: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-08-18 08:41:25,527 [Worker-14: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-18 08:41:25,532 [Worker-14: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-18 08:41:25,532 [Worker-14: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-08-18 08:41:25,532 [Worker-14: Launching Application] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\github\back-end\Spring Boot\Spring_Boot\02_projeto_spring\src\test\resources
+2022-08-18 08:42:13,875 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-18 08:42:13,875 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-08-18 08:42:13,899 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-08-18 08:42:13,928 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-08-18 08:42:13,931 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-08-18 08:42:13,931 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-08-18 08:42:13,932 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\github\back-end\Spring Boot\Spring_Boot\02_projeto_spring\src\test\resources
