@@ -20,3 +20,6 @@ Repositório de estudo sobre Spring Boot e JPA
 
 ## @Controller vs @RestController
 - O trabalho do **@Controller** é criar um Map do model object e encontrar uma view, mas o **@RestController** simplesmente retorna o objeto e os dados do objeto são gravados diretamente na resposta HTTP como JSON ou XML.
+
+## DTO
+- Padrão Objeto de Transferência de Dados (do inglês, Data transfer object design pattern, ou simplesmente DTO) é um padrão de arquitetura de objetos que agregam e encapsulam dados para transferência.
