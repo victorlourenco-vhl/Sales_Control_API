@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import com.tgid.spring.domain.Categoria;
 import com.tgid.spring.repositories.CategoriaRepository;
+import com.tgid.spring.resources.dto.CategoriaDTO;
 import com.tgid.spring.services.exceptions.DataIntegrityException;
 import com.tgid.spring.services.exceptions.ObjectNotFoundException;
 
@@ -56,6 +57,10 @@ public class CategoriaService {
 	public Page<Categoria> findPage(Integer page, Integer linesPerPage, String orderBy, String direction){
 		PageRequest pageRequest  = PageRequest.of(page, linesPerPage, Direction.valueOf(direction), orderBy);
 		return repo.findAll(pageRequest);
+	}
+	
+	public Categoria fromDTO(CategoriaDTO objDto) {
+		return new Categoria(objDto.getId(), objDto.getNome());
 	}
 	
 	
