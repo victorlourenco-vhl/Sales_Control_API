@@ -23,3 +23,18 @@ Repositório de estudo sobre Spring Boot e JPA
 
 ## DTO
 - Padrão Objeto de Transferência de Dados (do inglês, Data transfer object design pattern, ou simplesmente DTO) é um padrão de arquitetura de objetos que agregam e encapsulam dados para transferência.
+
+## JPQL 
+- Linguagem de consulta da JPA
+- Similar à SQL, porém as consultas são expressas em "nível"
+de objetos
+- É obrigatória a atribuição de um "alias" (apelido) aos objetos pretendidos na consulta
+
+- Retorna um cliente:
+```
+SELECT * FROM CLIENTE
+```
+- Retorna um List\<Cliente>
+```
+SELECT * obj FROM Cliente Obj
+```
