@@ -1,6 +1,7 @@
 package com.tgid.spring.resources.dto;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -17,7 +18,7 @@ public class ClienteDTO implements Serializable {
 	@Size(min=5, max=120, message = "O tamanho deve ser entre 5 e 12 caracteres")
 	private String nome;
 	
-	@NotEmpty
+	@NotEmpty(message = "Preenchimento obrigatório!")
 	@Email(message = "Email inválido")
 	private String email;
 	
@@ -53,6 +54,23 @@ public class ClienteDTO implements Serializable {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ClienteDTO other = (ClienteDTO) obj;
+		return Objects.equals(id, other.id);
 	}
 	
 	
