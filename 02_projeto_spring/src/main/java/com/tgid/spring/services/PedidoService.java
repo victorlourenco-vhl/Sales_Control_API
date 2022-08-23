@@ -13,7 +13,6 @@ import com.tgid.spring.domain.enums.EstadoPagamento;
 import com.tgid.spring.repositories.ItemPedidoRepository;
 import com.tgid.spring.repositories.PagamentoRepository;
 import com.tgid.spring.repositories.PedidoRepository;
-import com.tgid.spring.repositories.ProdutoRepository;
 import com.tgid.spring.services.exceptions.ObjectNotFoundException;
 
 @Service
@@ -21,7 +20,7 @@ public class PedidoService {
 	
 	@Autowired
 	private PedidoRepository repo;
-	
+
 	@Autowired
 	private BoletoService boletoService;
 
@@ -29,12 +28,12 @@ public class PedidoService {
 	private PagamentoRepository pagamentoRepository;
 
 	@Autowired
-	private ProdutoRepository produtoRepository;
+	private ItemPedidoRepository itemPedidoRepository;
 
 	@Autowired
-	private ItemPedidoRepository itemPedidoRepository;
+	private ProdutoService produtoService;
 	
-	public Pedido buscar(Integer id) {
+	public Pedido find(Integer id) {
 		Optional<Pedido> obj = repo.findById(id);
 		if(obj == null) {
 			throw new ObjectNotFoundException("Objeto não encontrado! Id: " + id 
@@ -57,7 +56,7 @@ public class PedidoService {
 		pagamentoRepository.save(obj.getPagamento());
 		for (ItemPedido ip : obj.getItens()) {
 			ip.setDesconto(0.0);
-			ip.setPreco(produtoRepository.findById(ip.getProduto().getId()).getPreco());
+			ip.setPreco(produtoService.find(ip.getProduto().getId()).getPreco());
 			ip.setPedido(obj);
 		}
 		itemPedidoRepository.saveAll(obj.getItens());
