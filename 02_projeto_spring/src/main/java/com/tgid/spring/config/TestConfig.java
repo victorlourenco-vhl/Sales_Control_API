@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.expression.ParseException;
 
 import com.tgid.spring.services.DBService;
+import com.tgid.spring.services.EmailService;
+import com.tgid.spring.services.MockEmailService;
 
 @Configuration
 @Profile("test")
@@ -21,4 +23,8 @@ public class TestConfig {
 		return true;
 	}
 	
+	@Bean
+	public EmailService emailService() {
+		return new MockEmailService();
+	}
 }
