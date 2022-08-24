@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.expression.ParseException;
 
 import com.tgid.spring.services.DBService;
+import com.tgid.spring.services.EmailService;
+import com.tgid.spring.services.SmtpEmailService;
 
 @Configuration
 @Profile("dev")
@@ -28,6 +30,11 @@ public class DevConfig {
 		
 		dbService.instantiateTestDatabase();
 		return true;
+	}
+	
+	@Bean
+	public EmailService emailervice() {
+		return new SmtpEmailService();
 	}
 	
 }
