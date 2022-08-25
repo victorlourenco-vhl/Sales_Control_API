@@ -79,7 +79,6 @@ INDEX VERSION 1.131+D:\github\back-end\Spring Boot\Spring_Boot\.metadata\.plugin
 1994884211.index
 4066242999.index
 3957377271.index
-1053225654.index
 475936061.index
 1330836880.index
 104206923.index
