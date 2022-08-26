@@ -2,44 +2,60 @@ package com.tgid.spring.resources.exceptions;
 
 public class StandardError {
 	
+	private Long timestamp;
 	private Integer status;
-	private String msg;
-	private Long timeStamp;
+	private String error;
+	private String message;
+	private String path;
 	
 	public StandardError() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public StandardError(Integer status, String msg, Long timeStamp) {
+	public StandardError(Long timestamp, Integer status, String error, String message, String path) {
 		super();
+		this.timestamp = timestamp;
 		this.status = status;
-		this.msg = msg;
-		this.timeStamp = timeStamp;
+		this.error = error;
+		this.message = message;
+		this.path = path;
+	}
+
+	public Long getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(Long timestamp) {
+		this.timestamp = timestamp;
 	}
 
 	public Integer getStatus() {
-		return status;
+		return this.status;
+	}
+	
+	public String getError() {
+		return error;
 	}
 
-	public void setStatus(Integer status) {
-		this.status = status;
+	public void setError(String error) {
+		this.error = error;
 	}
 
-	public String getMsg() {
-		return msg;
+	public String getMessage() {
+		return message;
 	}
 
-	public void setMsg(String msg) {
-		this.msg = msg;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
-	public Long getTimeStamp() {
-		return timeStamp;
+	public String getPath() {
+		return path;
 	}
 
-	public void setTimeStamp(Long timeStamp) {
-		this.timeStamp = timeStamp;
+	public void setPath(String path) {
+		this.path = path;
 	}
 	
 	
