@@ -1,5 +1,17 @@
 # Spring Boot
-Repositório de estudo sobre Spring Boot e JPA
+Stack do projeto:
+- Spring Boot
+- Envio de e-mail
+- SQL (MySQL)
+- JPA
+- Autenticação com JWT
+
+## Diagrama de Classes
+![diagrama-de-classes](https://user-images.githubusercontent.com/78964459/199051096-9c8b2511-d08c-496b-a08e-ac5ad63cd153.png)
+
+## Diagram de Objetos
+![diagrama-de-objetos](https://user-images.githubusercontent.com/78964459/199051219-0d81545a-8b77-4060-9345-7f673230f6d1.png)
+
 
 ## Serializable
 - É uma interface que diz que os objetos da classe poderão ser convertidos para um sequência de bytes, sendo assim, podendo ser trafegados em redes, gravados em arquivos e assim por diante.
